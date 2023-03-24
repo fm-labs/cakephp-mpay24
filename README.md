@@ -18,6 +18,18 @@ composer require fm-labs/cakephp-mpay24
 ```
 
 
+```php
+// src/Application.php
+
+class Application extends \Cake\Application {
+    public bootstrap($configDir) {
+        // ... your bootstrap code ...
+        $this->addPlugin('FmLabs/Mpay24')
+    }
+}
+```
+
+
 ## Configuration
 
 ```php
