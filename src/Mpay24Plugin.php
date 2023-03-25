@@ -28,10 +28,10 @@ class Mpay24Plugin extends BasePlugin
      */
     public function bootstrap(PluginApplicationInterface $app): void
     {
-//        Configure::load('Mpay24.mpay24');
-//        if (Plugin::isLoaded('Settings')) {
-//            Configure::load('Mpay24', 'settings');
-//        }
+        Configure::load('FmLabs/Mpay24.mpay24');
+        if (Plugin::isLoaded('Settings')) {
+            Configure::load('FmLabs/Mpay24', 'settings');
+        }
     }
 
     /**

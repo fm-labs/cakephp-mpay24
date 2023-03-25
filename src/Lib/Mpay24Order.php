@@ -13,7 +13,8 @@ class Mpay24Order extends BaseMpay24Order {
      */
     public function validate(): bool
     {
-        $schemaPath = \Cake\Core\Plugin::path('Mpay24') . DS . "resources" . DS . "MDXI.xsd";
+        //$schemaPath = \Cake\Core\Plugin::path('FmLabs/Mpay24') . DS . "resources" . DS . "MDXI.xsd";
+        $schemaPath = dirname(dirname(dirname(__FILE__))) . DS . "resources" . DS . "MDXI.xsd";
         if (!$this->document->schemaValidate($schemaPath)) {
             return false;
         }

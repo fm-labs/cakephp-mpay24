@@ -36,7 +36,7 @@ class Mpay24Client extends Mpay24
         $merchantId = $profile['merchantId'] ?? null;
         $merchantPassword = $profile['merchantPassword'] ?? null;
         if (!$merchantId || !$merchantPassword) {
-            throw new \RuntimeException(__("Mpay24 credentials missing"));
+            throw new \RuntimeException(__d('mpay24', "Mpay24 credentials missing"));
         }
 
         $config = new Mpay24Config();
